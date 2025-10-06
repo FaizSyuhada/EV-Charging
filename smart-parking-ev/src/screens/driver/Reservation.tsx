@@ -7,7 +7,6 @@ export default function ReservationScreen() {
 	const r = id ? getReservation(id) : undefined
 	if (!r) return <div>Reservation not found</div>
 
-	const now = Date.now()
 	const canCheckIn = r.status === 'reserved'
 	const charging = !!r.chargeStartedAt
 	const canCheckout = r.status === 'active'
